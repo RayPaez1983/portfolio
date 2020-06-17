@@ -1,0 +1,27 @@
+$screen-md: 768px;
+$screen-lg: 1024px;
+
+$color-hover: rgb(115, 208, 245);
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+$color-primary: #2962ff;
+$color-primary--light: #dde4f7;
+$color-primary--dark: #0039cb;
+
+$color-danger: #E72D41;
+$color-text: #487ef3;
+
+$color-link: $color-primary;
+$color-error: $color-danger;
+
+$font-gotham-bold: 'GothamBold';
+$font-gotham-book: 'GothamBook';
+$font-gotham-medium: 'GothamMedium';
+$font-roboto-medium: 'Roboto-Medium';
+$font-roboto-regular: 'Roboto-Regular';
+
+$font-paragraph: $font-roboto-regular;
+$font-paragraph-size: 16px;
+$line-height-paragraph: 22px;
+$font-paragraph-size--desktop: 18px;

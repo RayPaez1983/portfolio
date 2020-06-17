@@ -1,0 +1,145 @@
+.o-header {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 10px;  
+    padding-bottom: 10px;
+    background-color: $color-primary;
+    z-index: 100; 
+
+    @media screen and (min-width: 768px) {
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding-top: 15px;  
+        padding-bottom: 15px;
+        transition-property: top;
+        transition-duration: 0.3;
+        transition-timing-function: ease-in-out;
+        z-index: 100;  
+}
+
+    &.is-shown {
+        top: 0;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in;
+
+        }
+
+    &__brand {
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: $color-hover;
+            }
+        }
+    }
+
+    &__button-toggle {
+        text-align: right;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            
+            &:focus {
+                background-color: transparent;             
+            }
+                .hamburger-box {
+                    .hamburger-inner{
+                            background-color: white;
+
+                            &:hover {
+                                background-color: $color-hover;
+                            }
+                           
+                        &:before{
+                            background-color: white;
+
+                            &:hover {
+                                background-color: $color-hover;
+                            }
+                        }
+
+                        &:after {
+                            background-color: white;
+
+                            &:hover {
+                                background-color: $color-hover;
+                            }
+                        }
+                        
+                    }
+                 }
+            }
+            
+            
+    }
+
+    &__navigation {   
+        color: white;   
+        font-weight: bold;   
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            position: absolute;
+            top: -150%;
+            left: 0;    
+
+            &.is-show {
+                padding-top: 40px;
+                padding-bottom: -20px;
+                height: 300%;
+                top: 80%;
+                background-color: $color-primary;
+                font-size: 50px;
+                font-weight: bold;
+                line-height: 50%;
+            }
+        }
+
+        ul {
+            width: 100%;
+            text-align: center;
+
+            @media only screen and (min-width: 768px) {
+                text-align: right;            
+            }
+        }
+
+        li {
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                color: $color-hover;
+            }
+            @media only screen and (min-width: 768px) {
+                display: inline-block;
+                margin-right: 30px;
+                margin-bottom: 0px;                
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                display: block;
+
+                &:hover {
+                    color: $color-hover;
+                }
+            }
+        }           
+    }
+}

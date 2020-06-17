@@ -1,0 +1,22 @@
+.swiper {
+    &-button-prev,
+    &-button-next {
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+        background-color: $color-white;
+        background-image: none;
+        transition: all 0.25s ease-in-out;
+
+        i {
+            display: block;
+            padding: 10px;
+            color: $color-text;
+        }
+
+        &:hover {
+            background-color: darken($color-white, 5%);
+            transition: all 0.25s ease-in;
+        }
+    }
+}

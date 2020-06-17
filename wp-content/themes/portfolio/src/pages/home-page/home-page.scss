@@ -1,0 +1,555 @@
+.p-homepage {
+    &__header {
+        position: relative;
+        width: 100vw;
+        height: 100vh;     
+
+        .avatar {
+            position: absolute;
+            z-index: 50;
+            width: 90%;                 
+            
+            img {
+                width: 150px;
+                height: 150px;
+                display: block;
+                margin-right: auto;
+                margin-bottom: 10px;
+                margin-left: auto;
+                border-radius: 50%;
+                border: 3px solid $color-primary;
+
+                @media screen and (min-width:768px) {
+                width: 225px;
+                height: 225px;
+                display: block;
+                margin-right: auto;
+                margin-bottom: 40px;
+                margin-left: auto;
+                border-radius: 50%;
+                border: 3px solid $color-primary;
+                }
+            }
+
+            &__slider {
+                box-sizing: border-box;  
+                width: auto;                  
+                height: 50px;
+                padding: 15px 0px 15px 0px;
+                margin: 0px 50px 0px 50px;
+                background-color: $color-primary--dark;
+                overflow: hidden;
+
+                @media screen and (min-width:768px) {
+                box-sizing: border-box;                    
+                height: 75px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin: 0px 350px 0px 350px;
+                background-color: $color-primary--dark;
+                overflow: hidden;
+             }
+
+                .swiper {
+                    &-slide {
+                       p { 
+                        font-size: 20px;
+                        color: white;
+                        text-align: center;
+                        font-weight: bold;
+                        @media screen and (min-width:768px) {
+                            color: white;
+                            text-align: center;
+                            font-size: 35px; 
+                            line-height: 35px; 
+                            font-weight: bold;
+                            font-family: "Roboto-Regular";
+                        }
+                       }
+                   }
+   
+                   &-pagination {
+                       top: calc(100% + 10px);
+                       width: 100%;
+   
+                       &-bullet {
+                           display: inline-block;
+                           width: 60px;
+                           height: 10px;
+                           margin-right: 10px;
+                           border-radius: initial;
+                           background-color: rgb(23, 19, 250);
+                       }
+               
+                       &.swiper-pagination-bullet-active {
+                           background-color: $color-primary--dark;
+                       }
+                   }
+               }
+            }
+        }
+
+        &__slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            .picture {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                
+            }
+        }
+    } 
+
+    .section {
+        padding-top: 100px;
+        padding-bottom: 80px;
+
+        h2 {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+    }
+
+
+    &__about {       
+       .container {   
+        display: block;
+        margin-right: 20px;    
+        margin-left: 20px;
+               
+       @media screen and (min-width:768px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-evenly;
+        grid-gap: 30px;
+        
+        }
+    }
+        
+        h2 {
+            color: $color-primary--dark;
+            
+        }
+        &__photo {
+            img {
+                margin-right: 20px;
+                margin-bottom: 15px;
+                max-width: 100%;                
+                height: auto;
+            }
+        }
+    
+        &__content {   
+             .paragraph {
+                 margin-bottom: 20px;
+             }
+        }
+    
+        &__skills-section {            
+            width: 100%;	 
+            
+            @media screen and (max-width:768px){
+                width: 80%;
+                align-items: center;
+             }
+            .skill {
+                margin-bottom: 35px;
+                position: relative;
+	        	overflow-x:hidden;
+            
+            }
+            .skill > p {           
+
+                
+            }
+            .skill:before{
+                width: 100%;
+                height: 5px;
+                content: "";
+                display: block;
+                position: absolute;
+                background: #959595;
+                bottom: 0;
+            }
+            .skill-bar {
+                width: 100%;
+                height: 5px;
+                background: $color-primary--dark;
+                display: block;
+                position: relative;
+            }
+        
+            /* SKILL 1 */
+            .skill1{
+                width: 95%;
+            
+            }
+            .skill-bar p{
+                position: absolute;
+                border-top: 5px solid $color-primary--dark;
+                top: -30px;
+                padding: 0;
+                font-size: 18px;
+                padding: 3px 0;
+                font-weight: 500;
+            }
+            .skill-bar {
+                position: relative;
+            
+            }
+        
+            .skill1 .skill-count1 {
+                right: 0;
+            }
+            /* SKILL 2 */
+            .skill2{
+                width: 85%;
+            }
+        
+            .skill2 .skill-count2 {
+                right: 0;
+            }
+            /* SKILL 3 */
+            .skill3{
+                width: 75%;
+            }
+            .skill3 .skill-count3 {
+                right: 0;
+            }
+            
+            
+            
+        }
+    }
+
+    &__services {
+        width: 100vw;
+        background-color: $color-primary--light;
+        padding-top: 100px;
+        padding-bottom: 80px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 25px;
+            color: $color-primary--dark;
+        }
+
+        &__content {
+            margin-bottom: 60px;
+          }
+          .grid {
+            margin-bottom: 60px;
+          }
+         .services-item {
+            margin-bottom: 15px;  
+            text-align: center;  
+            color: $color-primary--dark;                         
+                @media only screen and (min-width: 768px) {
+                margin-right: 40px;
+                margin-bottom: 35px;
+                margin-left: 30px;
+                text-align: right;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+               
+            }
+
+            h3 {
+                position: relative;
+
+                img {
+                    @media only screen and (min-width: 768px) {
+                        position: absolute;
+                        top: 0;
+                        right: - 50px;
+                    }
+                }
+            }
+
+            &.even {
+                text-align: center;
+                @media only screen and (min-width: 768px) {
+                text-align: left;
+                }
+
+                h3 {
+                    img {
+                        right: initial;
+                        left: -50px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 25px;
+                }
+            }
+        }     
+
+        .testimonials {
+            width: 100%;
+
+            @media only screen and (max-width: 512px) {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            @media only screen and (min-width: 512px) {
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            @media only screen and (min-width: 768px) {
+                width: 60%;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                width: 800px;
+            }
+
+            &__title {
+                margin-bottom: 20px;
+            }
+            
+            &__slider {
+                position: relative;
+                width: 100%;
+                margin-bottom: 25px;
+                overflow: hidden;            
+            }
+
+            .swiper {
+                &-slide {
+                    box-sizing: border-box;
+                    position: relative;
+                    padding-right: 40px;
+                    padding-left: 40px;
+
+                    @media only screen and (min-width: 512px) {
+                        padding-right: 60px;
+                        padding-left: 60px;
+                    }
+        
+                    @media only screen and (min-width: 768px) {
+                        padding-right: 80px;
+                        padding-left: 80px;
+                    }
+
+                    img {
+                        position: absolute;
+                        width: 30px;
+
+                        @media only screen and (min-width: 512px) {
+                            width: 40px;
+                        }
+
+                        &:nth-child(1) {
+                            left: 5px;
+
+                            @media only screen and (min-width: 512px) {
+                                left: 10px;
+                            }
+
+                            @media only screen and (min-width: 768px) {
+                                left: 20px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            right: 5px;
+                            bottom: 50px;
+                            transform: rotate(180deg);
+
+                            @media only screen and (min-width: 512px) {
+                                right: 10px;
+                            }
+
+                            @media only screen and (min-width: 768px) {
+                                right: 20px;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 25px;
+                    }
+
+                    h3 {
+                        font-family: "Roboto-Regular";
+                        color: $color-primary--dark;
+                        letter-spacing: 1px;
+                        line-height: 22px;
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                }
+
+                &-pagination {
+                    position: relative;
+                    width: 100%;
+                    
+                    &-bullet {
+                        width: 25px;
+                        height: 25px;
+                        margin-right: 10px;
+                        border-radius: 0;
+                        background: url(../images/icons/face.png);
+                    
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+
+    &__portfolio {
+        
+        h2 {
+            margin-top: 80px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        &-paragraph {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        &-lightbox {
+            box-sizing: border-box;
+            padding-right: 50px;
+            padding-left: 50px;
+            display: flex;     
+            justify-content: space-between;
+
+            &.even {
+                margin-bottom: 150px;
+            }
+            
+            :hover {
+                opacity: 0.9;
+                filter: alpha(opacity=90);  
+                transition-delay: initial;         
+            }
+        }
+    }    
+    
+    &__contact {
+
+        background-color: $color-primary--light;
+        margin-bottom: 0;
+        padding-top: 80px;
+        padding-bottom: 80px;        
+        text-align: center;   
+        align-items: center;
+
+        &__content {
+            display: block;
+            margin-right: 20px;    
+            margin-left: 20px;
+            
+            @media only screen and (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 40px;
+                color: $color-primary--light;
+            }
+        }
+
+        &__form {
+            width: 100%;
+            height: auto; 
+            margin-top: 20px;
+            margin-right: 15px;
+            margin-bottom: 40px;
+            @media only screen and (min-width: 768px){
+                margin-top: 25px;
+                margin-bottom: 25px;
+                width: 600px;
+                height: 300px; 
+            }
+            
+            ::placeholder {
+                color:rgb(106, 145, 252);
+               }
+           
+            .submit {
+                width: 200px;
+                height: 50px;
+                background-color: $color-primary--dark;
+                color: whitesmoke;
+                border: $color-primary--light 1.5px;                
+                
+                &:hover {
+                background-color: $color-text;
+                color: $color-primary--light
+                } 
+                @media only screen and (min-width: 768px) {
+                    width: 600px;
+                    height: 50px;
+                    margin-top: 25px;
+                    margin-bottom: 35px;                    
+                }
+            }            
+        }
+
+        &__map {
+            width: 100%;
+            height: auto; 
+            margin-bottom: 40px;
+            @media only screen and (min-width: 768px) {
+                
+            }
+        }
+
+        &__information {
+            font-size: 12px; 
+            display: flex;
+            justify-content: space-between;
+            font-family: "Roboto-Regular";
+               color: $color-primary;
+               font-weight: 800;
+               text-decoration: none;
+
+            @media only screen and (min-width: 768px) {
+               display: flex;
+               justify-content: space-between;
+               margin-top: 50px;
+               margin-left: 100px;
+               margin-right: 100px;
+               font-family: "Roboto-Regular";
+               color: $color-primary;
+               font-weight: 800;
+               text-decoration: none;
+            }
+        }
+    }
+}   
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+

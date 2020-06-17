@@ -1,0 +1,27 @@
+.o-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: $color-primary;
+ 
+    h2 {
+       margin-bottom: 20px;
+       color: white !important;
+    }
+ 
+    &__social {
+       svg {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          margin-right: 20px;
+          margin-bottom: 20px;
+       }   
+    }
+ 
+    p {
+      color: whitesmoke; 
+    }
+ 
+    
+ }

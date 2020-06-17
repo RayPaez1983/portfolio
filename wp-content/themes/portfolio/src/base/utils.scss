@@ -1,0 +1,197 @@
+@mixin reset-spaces {
+  margin: 0;
+  padding: 0;
+}
+
+[class*='hidden-'] {
+  &[class*='-xs'] {
+    @media all and (max-width: $screen-md) {
+      display: none !important;
+    }
+  }
+
+  &[class*='-md'] {
+    @media all and (min-width: $screen-md) and (max-width: $screen-lg) {
+      display: none !important;
+    }
+  }
+
+  &[class*='-lg'] {
+    @media all and (min-width: $screen-lg) {
+      display: none !important;
+    }
+  }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.align-center {
+  text-align: center;
+}
+
+@for $i from 1 through 10 {
+  .mt-auto {
+    margin-top: auto !important;
+  }
+
+  .mr-auto {
+    margin-right: auto !important;
+  }
+
+  .mb-auto {
+    margin-bottom: auto !important;
+  }
+
+  .ml-auto {
+    margin-left: auto !important;
+  }
+
+  @if $i == 1 {
+    .m-0 {
+      margin: 0 !important;
+    }
+
+    .mt-0 {
+      margin-top: 0 !important;
+    }
+
+    .mr-0 {
+      margin-right: 0 !important;
+    }
+
+    .mb-0 {
+      margin-bottom: 0 !important;
+    }
+
+    .ml-0 {
+      margin-left: 0 !important;
+    }
+
+    .p-0 {
+      padding: 0 !important;
+    }
+
+    .pt-0 {
+      padding-top: 0 !important;
+    }
+
+    .pr-0 {
+      padding-right: 0 !important;
+    }
+
+    .pb-0 {
+      padding-bottom: 0 !important;
+    }
+
+    .pl-0 {
+      padding-left: 0 !important;
+    }
+  }
+
+
+  .m-#{$i * 10} {
+    margin: ($i * 10) + px !important;
+  }
+
+  .mt-#{$i * 10} {
+    margin-top: ($i * 10) + px !important;
+  }
+
+  .mr-#{$i * 10} {
+    margin-right: ($i * 10) + px !important;
+  }
+
+  .mb-#{$i * 10} {
+    margin-bottom: ($i * 10) + px !important;
+  }
+
+  .ml-#{$i* 10} {
+    margin-left: ($i * 10) + px !important;
+  }
+
+  .p-#{$i * 10} {
+    padding: ($i * 10) + px !important;
+  }
+
+  .pt-#{$i * 10} {
+    padding-top: ($i * 10) + px !important;
+  }
+
+  .pr-#{$i * 10} {
+    padding-right: ($i * 10) + px !important;
+  }
+
+  .pb-#{$i * 10} {
+    padding-bottom: ($i * 10) + px !important;
+  }
+
+  .pl-#{$i* 10} {
+    padding-left: ($i * 10) + px !important;
+  }
+}
+
+@mixin fixCarouselAuto($bg-color: #FFFFFF) {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    background-color: $bg-color;
+
+    @media all and (min-width: $screen-md) {
+        display: none;
+    }
+  }
+}
+
+.tt-none {
+  text-transform: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.scroll-bar {
+  &::-webkit-scrollbar {
+    width: 8px;
+	  background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555555;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FFFFFF; }
+}
+
+@keyframes scroll-indicator-animation {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}

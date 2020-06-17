@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto/Roboto-Bold.eot'), local('☺'), url('../fonts/Roboto/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Bold.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto/Roboto-Medium.eot'), local('☺'), url('../fonts/Roboto/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Medium.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto/Roboto-Regular.eot'), local('☺'), url('../fonts/Roboto/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Regular.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto/Roboto-Light.eot'), local('☺'), url('../fonts/Roboto/Roboto-Light.woff') format('woff'), url('../fonts/Roboto/Roboto-Light.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Light.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Light.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gotham/GothamBold.eot'), local('☺'), url('../fonts/Gotham/GothamBold.woff') format('woff'), url('../fonts/Gotham/GothamBold.woff2') format('woff2'), url('../fonts/Gotham/GothamBold.ttf') format('truetype'), url('../fonts/Gotham/GothamBold.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gotham/GothamBook.eot'), local('☺'), url('../fonts/Gotham/GothamBook.woff') format('woff'), url('../fonts/Gotham/GothamBook.woff2') format('woff2'), url('../fonts/Gotham/GothamBook.ttf') format('truetype'), url('../fonts/Gotham/GothamBook.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gotham/GothamLight.eot'), local('☺'), url('../fonts/Gotham/GothamLight.woff') format('woff'), url('../fonts/Gotham/GothamLight.woff2') format('woff2'), url('../fonts/Gotham/GothamLight.ttf') format('truetype'), url('../fonts/Gotham/GothamLight.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gotham/GothamMedium.eot'), local('☺'), url('../fonts/Gotham/GothamMedium.woff') format('woff'), url('../fonts/Gotham/GothamMedium.woff2') format('woff2'), url('../fonts/Gotham/GothamMedium.ttf') format('truetype'), url('../fonts/Gotham/GothamMedium.svg') format('svg');
+}
+
+@mixin paragraph-styles {
+    color: $color-text;
+    font-family: $font-paragraph;
+    font-size: $font-paragraph-size;
+
+    @media all and (min-width: $screen-md) {
+        font-size: $font-paragraph-size--desktop;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-gotham-bold;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 38px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 34px;
+    color: $color-text;
+}
+
+h3 {
+    position: relative;
+    font-size: 25px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $color-primary;;
+
+    &:before {
+        position: absolute;
+        left: -30px;
+        bottom: -10px;
+        width: 50px;
+        height: 5px;
+        background-color: $color-primary;
+    }
+}
+
+p,
+figcaption,
+ul li {
+    @include paragraph-styles;
+}
+
+ul li {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    @include paragraph-styles;
+    transition-property: color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    font-family: $font-gotham-book;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        transition-timing-function: ease-in;
+        color: $color-primary;
+        text-decoration: none;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
